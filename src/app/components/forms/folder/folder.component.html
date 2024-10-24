@@ -1,0 +1,27 @@
+<button (click)="createFolder()">Create Folder</button>
+<button (click)="createForm()">Create form</button>
+<ng-container *ngTemplateOutlet="filesDisplay; context:{ $implicit: userData}"></ng-container>
+
+
+<ng-template #filesDisplay let-userData>
+    <div  fxLayout="row wrap">
+        @for(data of userData; track $index){
+            @if(data?.type == 'folder'){
+                <div fxLayout="column" (click)="getfolderDetailssss({id:data?.id})">
+                    <img width="144" height="144" src="https://img.icons8.com/color/144/folder-invoices--v1.png" alt="folder-invoices--v1"/>
+                    <p>{{data?.name}}</p>
+                </div>
+    
+            }
+            @if(data?.type == 'form'){
+                <div fxLayout="column" fxLayoutAlign="center center">
+                    <img width="135" height="135" src="https://img.icons8.com/ios/100/form.png" alt="form"/>
+                    <p>{{data?.name}}</p>
+                </div>
+    
+            }
+        }
+    </div>
+
+
+</ng-template>
