@@ -1,0 +1,25 @@
+<mat-drawer-container class="drawer-container">
+  <mat-drawer mode="side" class="side-drawer" opened>
+    <ng-container *ngTemplateOutlet="sideMenu">
+    </ng-container>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+<ng-template #sideMenu>
+  <div fxFlex="100" fxLayout="column" class="menu-list-column">
+    @for(menu of constantDetails.sideMenuList; track $index){
+    <div [ngClass]="selectedMenu.menuName === menu.menuName?'menu-button-selected':'menu-button'" fxLayout="row"
+      (click)="navigateTo(menu);">
+      <mat-icon style="margin-right: 5px;">{{menu.iconName}}</mat-icon>
+      <span>{{menu.menuName}}</span>
+    </div>
+    }
+    @empty {
+    <p>No Menu Found</p>
+    }
+  </div>
+</ng-template>

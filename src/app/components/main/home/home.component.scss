@@ -1,16 +1,3 @@
-.drawer-container {
-  width: auto;
-  height: 90%;
-}
-
-.side-drawer {
-  width: 250px !important;
-  border-right: 4px solid #b1c3e6;
-  border-radius: 0px;
-  border-right-style: outset;
-  background: #f4f4fe;
-}
-
 .home-nav-bar {
   height: 10%;
   background: #354a74;
@@ -20,37 +7,4 @@
 .project-title {
   font-size: 24px;
   color: white;
-}
-
-.menu-list-column {
-  padding-top: 20px;
-}
-
-.menu-button-selected {
-  border-radius: 5px;
-  margin: 10px;
-  padding: 10px;
-  background: #5e6f8f;
-  color: white;
-  font-weight: 500;
-  pointer-events: none;
-}
-
-.menu-button {
-  border-radius: 5px;
-  margin: 10px;
-  padding: 10px;
-  color: #4a5d7f;
-  font-weight: 500;
-  border: 1px solid #5e6f8f;
-  cursor: pointer;
-}
-
-.menu-button:hover {
-  background: #ccd4e5;
-}
-
-.menu-icon {
-  margin-right: 5px;
-
 }
