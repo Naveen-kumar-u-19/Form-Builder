@@ -1,8 +1,8 @@
 export class MainConstant {
   sideMenuList: SideMenu[] = [
-    { menuName: 'Dashboard', link: '/dashboard', iconName: 'dashboard' },
-    { menuName: 'All Forms', link: '/forms', iconName: 'folder' },
-    { menuName: 'Results', link: '/results', iconName: 'dashboard' }
+    { menuName: 'Dashboard', link: 'app/dashboard', iconName: 'dashboard' },
+    { menuName: 'All Forms', link: 'app/forms', iconName: 'folder' },
+    { menuName: 'Results', link: 'app/results', iconName: 'dashboard' }
   ]
 }
 //Interface for side menu

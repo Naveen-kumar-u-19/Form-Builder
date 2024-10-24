@@ -19,7 +19,12 @@ export class HomeComponent implements OnInit {
     this.constantDetails = new MainConstant();
   }
   ngOnInit() {
-    this.selectedMenu = this.constantDetails.sideMenuList?.[0];
+    let findMenu = this.constantDetails.sideMenuList.find((menu: SideMenu) => menu.link === this.router.url);
+    if (findMenu?.link) {
+      this.selectedMenu = findMenu;
+    }
+    else
+      this.selectedMenu = this.constantDetails.sideMenuList?.[0];
     this.router.navigate([this.selectedMenu.link]);
   }
 
