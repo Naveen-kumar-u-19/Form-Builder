@@ -34,9 +34,14 @@ export class FlexLayoutDirective implements OnChanges {
    */
   applyLayout() {
     this.render.setStyle(this.element.nativeElement, 'display', 'flex');
-    this.render.setStyle(this.element.nativeElement, 'flex-direction', this.fxLayout);
+    const [flexDirection, flexFlow] = this.fxLayout.split(' ');
+    if (flexDirection)
+      this.render.setStyle(this.element.nativeElement, 'flex-direction', flexDirection);
+    if (flexFlow)
+      this.render.setStyle(this.element.nativeElement, 'flex-flow', flexFlow);
     if (this.fxFlex)
       this.render.setStyle(this.element.nativeElement, 'width', (this.fxFlex + '%'))
+    this.render.setStyle(this.element.nativeElement, 'flex-flow', this.fxLayout);
   }
   /**
    * Function used to set flex align details

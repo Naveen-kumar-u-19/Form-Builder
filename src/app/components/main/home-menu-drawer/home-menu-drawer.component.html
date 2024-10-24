@@ -1,6 +1,6 @@
 <mat-drawer-container class="drawer-container">
   <mat-drawer mode="side" class="side-drawer" opened>
-    <ng-container *ngTemplateOutlet="sideMenu">
+    <ng-container *ngTemplateOutlet="sideMenu;">
     </ng-container>
   </mat-drawer>
   <mat-drawer-content>
@@ -13,7 +13,7 @@
   <div fxFlex="100" fxLayout="column" class="menu-list-column">
     @for(menu of constantDetails.sideMenuList; track $index){
     <div [ngClass]="selectedMenu.menuName === menu.menuName?'menu-button-selected':'menu-button'" fxLayout="row"
-      (click)="navigateTo(menu);">
+      (click)="navigateTo(menu.link);">
       <mat-icon style="margin-right: 5px;">{{menu.iconName}}</mat-icon>
       <span>{{menu.menuName}}</span>
     </div>

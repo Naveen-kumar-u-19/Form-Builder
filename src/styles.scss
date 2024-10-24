@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.dialog-header {
+  padding: 15px;
+  background: #5e6f8f;
+  color: white;
+  font-size: 20px;
+}
+
+.dialog-header-close-icon {
+  cursor: pointer;
+}
+
+.mdc-dialog--open .mat-mdc-dialog-surface {
+  border-radius: 5px !important;
+}

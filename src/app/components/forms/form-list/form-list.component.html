@@ -1,1 +1,39 @@
 <p>form-list works!</p>
+<button (click)="openCreateFormDialog()">
+  Add
+</button>
+
+
+
+<ng-template #CreateForm>
+  <div fxLayout="column" fxFlex="100">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="dialog-header">
+      <span>Create Form</span>
+      <mat-icon class="dialog-header-close-icon" (click)="dialog.closeAll()">close</mat-icon>
+    </div>
+
+    <div fxLayout="row wrap" fxLayoutAlign="space-evenly center" class="dialog-body">
+      <div fxLayout="column" class="create-form-box" (click)="navigateTo('OWN')">
+        <img style="height: 200px;width: 200px;" src="/assets/createForm.jpg" alt="create-form">
+        <span class="create-form-button">Build Own Form</span>
+      </div>
+      <div fxLayout="column" class="create-form-box">
+        <img style="height: 200px;width: 200px;" src="/assets/editTemplate.jpg" alt="create-form">
+        <span class="create-form-button">Use Templates</span>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- <div fxLayout="row" class="dialog-body">
+      <div class="create-form-box" fxLayout="column" fxLayoutAlign="center center">
+        <img class="create-form-image" src="/assets/createForm.jpg" alt="create-form">
+        <span>Build own Form</span>
+      </div>
+    </div> -->
+
+  </div>
+
+</ng-template>

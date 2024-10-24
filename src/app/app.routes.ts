@@ -17,7 +17,7 @@ export const routes: Routes = [
         ]
       },
       {
-        path: 'editForms', component: FormListComponent
+        path: 'forms', component: FormListComponent
       },
     ],
   }
