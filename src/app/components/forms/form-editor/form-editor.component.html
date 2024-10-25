@@ -1,0 +1,42 @@
+<div fxLayout="row" class="form-editor">
+
+  @if(showEditor){
+  <!-- Controls -->
+  <div fxLayout="column" class="control-list">
+
+    @if(editorConstant.controlGroups;as group){
+
+    <div style="width: 100%;overflow-y: scroll;" fxLayout="column">
+
+      @for(groupName of group; track $index){
+
+      <div class="control-list-group">{{groupName}}</div>
+
+      @if(editorConstant.controlDetails; as controls){
+      @for (item of controls; track $index) {
+
+      @if(item.controlGroup === groupName){
+      <div fxLayout="row" class="control-list-types">
+        <span class="svg-icon">
+          <img class="default-svg-class" src="/assets/icons/{{item?.iconName}}.svg" [alt]="item?.iconName">
+        </span>
+        <span>{{item?.controlType}}</span>
+      </div>
+      }
+
+      }
+      }
+
+      }
+    </div>
+    }
+
+  </div>
+  }
+  <div class="form-div">
+    asa
+    <button (click)="showEditor=!showEditor;">click</button>
+  </div>
+
+
+</div>

@@ -1,0 +1,66 @@
+.control-list {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background: #33384a;
+  height: 100%;
+  min-width: 310px;
+}
+
+
+.control-list-group {
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+
+
+.control-list-types {
+  padding: 10px 10px 10px 15px;
+  background: #434a60;
+  color: white;
+  border-bottom: 1px solid #737373;
+  font-size: 15px;
+}
+
+
+
+.control-list ::-webkit-scrollbar {
+  width: 7px;
+  overflow-y: scroll;
+  background: #d3d3d3;
+  box-shadow: inset 0 0 4px #707070;
+}
+
+.control-list ::-webkit-scrollbar-thumb {
+  background: #33384a;
+  // border-radius: 10px;
+}
+
+.svg-icon {
+  margin-right: 15px;
+  display: flex;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-self: center
+}
+
+.default-svg-class {
+  height: 18px;
+  width: 18px;
+  background: white;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.form-div {
+  background: #ededff;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.form-editor {
+  display: flex;
+}

@@ -4,6 +4,7 @@ import { DashboardComponent } from './components/dashboard/dashboard/dashboard.c
 import { FormListComponent } from './components/forms/form-list/form-list.component';
 import { HomeMenuDrawerComponent } from './components/main/home-menu-drawer/home-menu-drawer.component';
 import { FolderComponent } from './components/forms/folder/folder.component';
+import { FormEditorComponent } from './components/forms/form-editor/form-editor.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/app', pathMatch: 'full' },
@@ -15,11 +16,11 @@ export const routes: Routes = [
         children: [
           { path: 'dashboard', component: DashboardComponent },
           { path: 'forms', component: FormListComponent },
-          { path: 'folder', component: FolderComponent}
+          { path: 'folder', component: FolderComponent }
         ]
       },
       {
-        path: 'forms', component: FormListComponent
+        path: 'forms', component: FormEditorComponent
       },
     ],
   }
