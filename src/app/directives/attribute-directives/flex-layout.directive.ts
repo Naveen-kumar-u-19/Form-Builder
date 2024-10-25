@@ -14,8 +14,11 @@ export class FlexLayoutDirective implements OnChanges {
    */
   @Input() fxLayoutAlign!: string;
 
-
   @Input() fxFlex!: string;
+  /**
+   * Variable used to apply gap
+   */
+  @Input() fxLayoutGap!: string
   /**
    * It is used to inject other class 
    * @param element contains Element reference
@@ -28,6 +31,7 @@ export class FlexLayoutDirective implements OnChanges {
   ngOnChanges() {
     this.applyLayout();
     this.alignFlex();
+    this.flexGap();
   }
   /**
    * Function used to apply layout details
@@ -52,6 +56,12 @@ export class FlexLayoutDirective implements OnChanges {
       this.render.setStyle(this.element.nativeElement, 'align-items', alignItem);
       this.render.setStyle(this.element.nativeElement, 'justify-content', justifyContent);
     }
+  }
+    /**
+   * Function used to set flex gap
+   */
+  flexGap(){
+    this.render.setStyle(this.element.nativeElement, 'gap', this.fxLayoutGap);
   }
 
 }
