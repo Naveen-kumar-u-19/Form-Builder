@@ -1,0 +1,12 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" class="header-style">
+  <div>
+    <span class="title">{{title}}</span>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="end center">
+    @for(item of buttonInfo ; track buttonInfo){
+    <button [ngClass]="item.class">
+      {{item.name}}
+    </button>
+    }
+  </div>
+</div>
